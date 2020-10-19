@@ -1,6 +1,6 @@
 # README
 
-Thin wrapper around the EasyOCR library, which handles urls and images on disk and outputs the OCR'd text on top of the recognized text.
+Thin wrapper around the EasyOCR library, which handles urls and images on disk and outputs the OCR'd text, on top of the recognized text, using openCV.
 
 ## Table of Contents
 
@@ -38,12 +38,13 @@ For CLI usage:
 $ python easy_easyocr.py --is_url True --image "https://example.com/exampleimage" --langs "en,tr" --use_gpu True
 ```
 Flags:
-``
+
+```
 "-u", "--is_url", type=bool, default=False, help="if image parameter is an url or filepath"
 "-i", "--image", required=True, help="path to input image to be OCR'd"
 "-l", "--langs", type=str, default="en", help="comma separated list of languages to OCR"
 "-g", "--use_gpu", type=bool, default=False, help="whether or not GPU should be used"
-``
+```
 For language codes, refer the EasyOCR github repo.
 
 ## Acknowledgements
